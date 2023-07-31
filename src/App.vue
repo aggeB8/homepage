@@ -1,20 +1,26 @@
 <script setup>
   import { RouterLink, RouterView } from 'vue-router'
+  import Links from './components/Links.vue'
   import Clock from './components/Clock.vue'
   import Modal from './components/Modal.vue'
+
+  if (localStorage.getItem('links') === null) {
+    localStorage.setItem('links', '[]')
+  }
 </script>
+
+<!--
+  <RouterView />
+-->
 
 <template>
   <main>
     <Modal />
     <Clock />
-    <RouterView />
+    <Links />
 
     <footer>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+
     </footer>
   </main>
 </template>

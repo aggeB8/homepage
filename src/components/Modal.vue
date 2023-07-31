@@ -1,6 +1,5 @@
 <script setup>
-    import IconPicker from '../components/IconPicker.vue'
-
+    import router from '../router'
     function openModal() {
         const modal = document.querySelector('#modal')
         modal.showModal()
@@ -9,22 +8,20 @@
     function closeModal() {
         const modal = document.querySelector('#modal')
         modal.close()
+        router.push('/')
     }
 </script>
 
 <template>
     <i id="gear" @click="openModal" class="bi bi-gear"></i>
-
     <dialog id="modal">
         <header>
             <p>Konfigurera</p>
             <i @click="closeModal" class="bi bi-x-lg"></i>
         </header>
         <div id="modal-container">
-            <p style="opacity: 0.1;">Färg<br>Länkar(crud ICONPICKER, drag n drop för order!)</p>
-            <IconPicker />
+            <RouterView />
         </div>
-
     </dialog>
 
 </template>
