@@ -1,0 +1,37 @@
+@import './base.css';
+
+* {
+  padding: 0px;
+  margin: 0px;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+html {
+  background-color: var(--bg-color)
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+i {
+  cursor: pointer;
+}
+
+.input-wrapper {
+  border-bottom: 2px solid #ffffff42;
+  width: 100%;
+}
+
+input {
+  background-color: inherit;
+  border: none;
+  font-size: 20px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
