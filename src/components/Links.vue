@@ -1,11 +1,9 @@
 <script setup>
     import { ref } from 'vue'
-    import { RouterLink } from 'vue-router'
-    let links = ref([
-        { site: "https://www.youtube.com", icon: "bi bi-youtube" },
-        { site: "https://www.github.com", icon: "bi bi-github" },
-        { site: "https://www.steamcommunity.com", icon: "bi bi-steam" },
-    ])
+
+    let linkArray = JSON.parse(localStorage.getItem('links'))
+
+    let links = linkArray
 
     function goTo(site) {
         window.open(site, '_blank');
@@ -14,8 +12,8 @@
 
 <template>
     <div id="grid">
-        <div @click="goTo(link.site)" class="grid-item" v-for="link in links">
-            <i :class="link.icon"></i>
+        <div @click="goTo(link.linkURL)" class="grid-item" v-for="link in links">
+            <i :class="link.linkIcon"></i>
         </div>
     </div>
 </template>
@@ -29,19 +27,22 @@
     }
 
     .grid-item {
-        width: 200px;
-        height: 200px;
-        background-color: var(--sec-color);
+        width: 100px;
+        height: 100px;
+
         text-align: center;
-        line-height: 200px;
-        font-size: 80px;
+        line-height: 100px;
+        font-size: 2rem;
         border-radius: 20px;
         transition: 0.15s;
         cursor: pointer;
+
+        border: 1px solid var(--border-color);
     }
 
     .grid-item:hover {
         background-color: rgb(67, 139, 139);
-    }
 
+        
+    }
 </style>

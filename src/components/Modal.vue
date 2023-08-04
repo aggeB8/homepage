@@ -23,12 +23,16 @@
             <RouterView />
         </div>
     </dialog>
-
 </template>
 
 <style scoped>
+    .bi-x-lg {
+        cursor: pointer;
+    }
+
     #gear {
-        font-size: 3rem;
+        cursor: pointer;
+        font-size: 1.5rem;
         position: absolute;
         right: 1rem;
         margin-top: 1rem;
@@ -48,8 +52,11 @@
         width: 300px;
         height: fit-content;
         border: none;
-        border-radius: 10px;
         background-color: var(--bg-color);
+
+        border-width: 1px;
+        border-style: solid;
+        border-image: var(--border-gradient);
     }
 
     #modal::backdrop {
@@ -63,8 +70,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 20px;
+        font-size: 1rem;
         font-weight: 500;
+
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-image: var(--border-gradient);
     }
 
     header > i {

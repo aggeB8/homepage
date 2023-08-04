@@ -16,10 +16,6 @@ a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
 
-i {
-  cursor: pointer;
-}
-
 .input-wrapper {
   width: 100%;
 }
@@ -27,16 +23,17 @@ i {
 input {
   background-color: inherit;
   border: none;
-  font-size: 20px;
+  font-size: 1rem;
   width: 100%;
-  border-bottom: 2px solid #ffffff42;
+  border-bottom: 1px solid #ffffff42;
 }
 
 button {
   background-color: inherit;
-  font-size: 20px;
-  border: 2px solid #ffffff42;
+  font-size: 1rem;
+  border: 1px solid #ffffff42;
   color: #ffffff42;
+  cursor: pointer;
 }
 
 input:focus {

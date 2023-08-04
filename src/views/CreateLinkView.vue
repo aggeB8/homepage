@@ -11,7 +11,6 @@
         let arr = iconArray
         let searchResult = arr.filter(icon => icon.match(searchTerm))
         filteredIcons.value = searchResult
-
     }
 
     let linkURL = ref()
@@ -23,12 +22,13 @@
 
     function createLink() {
         if (linkURL.value === '' || linkURL.value === undefined || linkIcon.value === undefined) {
-            console.log('null')
+            console.log('displaya errormeddelande')
         } else {
             let linkArray = JSON.parse(localStorage.getItem('links'))
             linkArray.push({linkIcon: linkIcon.value, linkURL: linkURL.value})
             localStorage.setItem('links', JSON.stringify(linkArray))
             router.push('/')
+            window.location.reload() //fixa bättre 'vue' metod
         }
     }
 </script>
@@ -75,8 +75,8 @@
     }
 
     .icon-wrapper {
-        font-size: 2.5rem;
-        background-color: var(--sec-color);
+        font-size: 1.7rem;
+        border: 1px solid var(--border-color);
         border-radius: 10px;
         width: 32%;
         height: 32%;
@@ -85,6 +85,7 @@
         align-items: center;
         transition: 0.2s;
         margin-bottom: 2%;
+        cursor: pointer;
     }
 
     .icon-wrapper:hover {

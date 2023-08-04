@@ -3,15 +3,17 @@
     import router from '../router'
 
     let links = JSON.parse(localStorage.getItem('links'))
+
 </script>
 
 <template>
     <button @click="router.push('/createlink')">Create a new link</button>
     <div v-for="link in links">
-        {{ link }}
+        <i :class="link.linkIcon"></i>
+        <p>edit</p>
     </div>
 
-    <p style="opacity: 0.1;">Drag n drop för att arrangera lista över länkar</p>
+    <p style="opacity: 0.1;">Drag n drop för att arrangera lista över länkar<br>Sortera med IDS! lägg till de i localstorage</p>
 </template>
 
 <style scoped>

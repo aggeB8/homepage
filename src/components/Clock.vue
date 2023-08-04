@@ -23,15 +23,33 @@
 </script>
 
 <template>
-    <p><span id="hours">{{ hours }}</span>:<span id="minutes">{{ minutes }}</span>:<span id="seconds">{{ seconds }}</span></p>
+    <div id="wrapper">
+        <div id="clock-wrapper">
+            <p><span id="hours">{{ hours }}</span>:<span id="minutes">{{ minutes }}</span>:<span id="seconds">{{ seconds }}</span></p>
+        </div>
+    </div>
 </template>
 
 <style scoped>
+    #wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    #clock-wrapper {
+        border-width: 1px;
+        border-style: solid;
+        border-image: var(--border-gradient);
+        width: fit-content;
+        padding: 15px 30px 15px 30px;;
+    }
+
     p {
         font-variant-numeric: tabular-nums;
-        margin: 7rem 0 7rem 0;
-        font-size: 80px;
-        text-align: center;
+        font-size: 2.25rem;
         font-weight: 500;
     }
 </style>
