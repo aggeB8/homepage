@@ -52,21 +52,25 @@
         width: 300px;
         height: fit-content;
         border: none;
-        background-color: var(--bg-color);
+        /* background-color: var(--bg-color); */
+        background-color: var(--modal-bg);
+        backdrop-filter: var(--modal-bg-blur);
 
+        border-radius: 10px;
         border-width: 1px;
         border-style: solid;
-        border-image: var(--border-gradient);
+        border-color: var(--border-color);
     }
 
     #modal::backdrop {
-        background-color: rgba(0, 0, 0, 0.656)
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     header {
         width: 100%;
         height: 3rem;
-        background-color: var(--sec-color);
+        background-color: var(--modal-bg);
+        backdrop-filter: var(--modal-bg-blur);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -75,7 +79,7 @@
 
         border-bottom-width: 1px;
         border-bottom-style: solid;
-        border-image: var(--border-gradient);
+        border-color: var(--border-color);
     }
 
     header > i {
@@ -88,7 +92,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 1rem
+        padding: 1rem;
     }
 
 

@@ -1,8 +1,14 @@
 :root {
-  --bg-color: rgb(0, 0, 0);
-  --sec-color: rgb(10, 10, 10);
-  --border-color: #3d3d3d;
+  --bg-color: #1d1f1e;
 
-  --border-gradient: linear-gradient(135deg, #3d3d3d, #000) 1;
+  --modal-bg: rgba(0, 0, 0, 0.2);
+  --modal-bg-blur: blur(10px);
+
+  --sec-color: #181a19;
+  --border-color: #3d3d3d;
+  --border-gradient: linear-gradient(135deg, #3d3d3d, #00000000) 1;
+  
+
+
 
 }

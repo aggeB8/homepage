@@ -42,7 +42,7 @@
     #clock-wrapper {
         border-width: 1px;
         border-style: solid;
-        border-image: var(--border-gradient);
+        border-color: #3d3d3d;
         width: fit-content;
         padding: 15px 30px 15px 30px;;
     }
