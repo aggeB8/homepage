@@ -1,9 +1,7 @@
 <script setup>
     import { ref } from 'vue'
 
-    let linkArray = JSON.parse(localStorage.getItem('links'))
-
-    let links = linkArray
+    let linkArray = ref(JSON.parse(localStorage.getItem('links')))
 
     function goTo(site) {
         window.open(site, '_blank');
@@ -12,7 +10,7 @@
 
 <template>
     <div id="grid">
-        <div @click="goTo(link.linkURL)" class="grid-item" v-for="link in links">
+        <div @click="goTo(link.linkURL)" class="grid-item" v-for="link in linkArray">
             <i :class="link.linkIcon"></i>
         </div>
     </div>

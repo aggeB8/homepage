@@ -24,11 +24,10 @@
         if (linkURL.value === '' || linkURL.value === undefined || linkIcon.value === undefined) {
             console.log('displaya errormeddelande')
         } else {
-            let linkArray = JSON.parse(localStorage.getItem('links'))
-            linkArray.push({linkIcon: linkIcon.value, linkURL: linkURL.value})
-            localStorage.setItem('links', JSON.stringify(linkArray))
+            let linkArray = ref(JSON.parse(localStorage.getItem('links')))
+            linkArray.value.push({linkIcon: linkIcon.value, linkURL: linkURL.value})
+            localStorage.setItem('links', JSON.stringify(linkArray.value))
             router.push('/')
-            window.location.reload() //fixa bättre 'vue' metod
         }
     }
 </script>
@@ -72,6 +71,7 @@
         flex-wrap: wrap;
         align-content: flex-start;
         justify-content: space-between;
+        gap: 2px;
     }
 
     .icon-wrapper {
@@ -84,7 +84,6 @@
         justify-content: center;
         align-items: center;
         transition: 0.2s;
-        margin-bottom: 2%;
         cursor: pointer;
     }
 

@@ -54,7 +54,6 @@
         border: none;
         /* background-color: var(--bg-color); */
         background-color: var(--modal-bg);
-        backdrop-filter: var(--modal-bg-blur);
 
         border-radius: 10px;
         border-width: 1px;
@@ -69,7 +68,7 @@
     header {
         width: 100%;
         height: 3rem;
-        background-color: var(--modal-bg);
+        background-color: var(--modal-bg-header);
         backdrop-filter: var(--modal-bg-blur);
         display: flex;
         justify-content: center;
