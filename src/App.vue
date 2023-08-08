@@ -2,6 +2,7 @@
   import Links from './components/Links.vue'
   import Clock from './components/Clock.vue'
   import Modal from './components/Modal.vue'
+  import Searchbar from './components/Searchbar.vue'
 
   if (localStorage.getItem('links') === null) {
     localStorage.setItem('links', '[]')
@@ -15,8 +16,9 @@
 <template>
   <Modal />
   <main>
-    <Clock />
-    <Links />
+      <Clock />
+      <Searchbar />
+      <Links />
   </main>
 </template>
 
@@ -28,4 +30,5 @@
     flex-direction: column;
     justify-content: center;
   }
+
 </style>

@@ -1,14 +1,10 @@
 :root {
   --bg-color: #1d1f1e;
-  --modal-bg: #090909;
+  --modal-bg: #1d1f1e;
   --modal-bg-header: #1a1a1a;
   
   --sec-color: #181a19;
 
   --border-color: #3d3d3d;
   --border-gradient: linear-gradient(135deg, #3d3d3d, #00000000) 1;
-  
-
-
-
 }
