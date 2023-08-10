@@ -31,6 +31,12 @@
 </template>
 
 <style scoped>
+    p {
+        font-variant-numeric: tabular-nums;
+        font-size: 2.25rem;
+        font-weight: 500;
+    }
+    
     #wrapper {
         width: 100%;
         display: flex;
@@ -45,11 +51,5 @@
         border-color: #3d3d3d;
         width: fit-content;
         padding: 15px 30px 15px 30px;;
-    }
-
-    p {
-        font-variant-numeric: tabular-nums;
-        font-size: 2.25rem;
-        font-weight: 500;
     }
 </style>

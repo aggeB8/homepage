@@ -7,4 +7,7 @@
 
   --border-color: #3d3d3d;
   --border-gradient: linear-gradient(135deg, #3d3d3d, #00000000) 1;
+  --border-radius: 10px;
+
+  --icon-size: 1.7rem;
 }

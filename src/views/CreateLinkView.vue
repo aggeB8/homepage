@@ -75,9 +75,9 @@
     }
 
     .icon-wrapper {
-        font-size: 1.7rem;
+        font-size: var(--icon-size);
         border: 1px solid var(--border-color);
-        border-radius: 10px;
+        border-radius: var(--border-radius);
         width: 32%;
         height: 32%;
         display: flex;

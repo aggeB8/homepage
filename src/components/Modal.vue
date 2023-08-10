@@ -16,8 +16,9 @@
     <i id="gear" @click="openModal" class="bi bi-gear"></i>
     <dialog id="modal">
         <header>
+            <i @click="router.push('/')" id="return-button" class="bi bi-arrow-return-left"></i>
             <p>Konfigurera</p>
-            <i @click="closeModal" class="bi bi-x-lg"></i>
+            <i @click="closeModal" id="close-button" class="bi bi-x-lg"></i>
         </header>
         <div id="modal-container">
             <RouterView />
@@ -26,12 +27,11 @@
 </template>
 
 <style scoped>
-    .bi-x-lg {
+    i {
         cursor: pointer;
     }
-
+    
     #gear {
-        cursor: pointer;
         font-size: 1.5rem;
         position: absolute;
         right: 1rem;
@@ -81,7 +81,13 @@
         border-color: var(--border-color);
     }
 
-    header > i {
+    #return-button {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+    }
+
+    #close-button {
         position: absolute;
         right: 1rem;
     }
