@@ -11,3 +11,11 @@
 
   --icon-size: 1.7rem;
 }
+
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src: url('fonts/Satoshi-Variable.ttf') format('woff2');
+       font-weight: 300 900;
+       font-display: swap;
+       font-style: normal;
+}

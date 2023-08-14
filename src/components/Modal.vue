@@ -17,7 +17,7 @@
     <dialog id="modal">
         <header>
             <i @click="router.push('/')" id="return-button" class="bi bi-arrow-return-left"></i>
-            <p>Konfigurera</p>
+            <p>Configure</p>
             <i @click="closeModal" id="close-button" class="bi bi-x-lg"></i>
         </header>
         <div id="modal-container">

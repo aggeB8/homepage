@@ -16,6 +16,10 @@
                     }
                 case 'Escape':
                     break
+                case 'Alt':
+                    break
+                case 'Tab':
+                    break
                 default:
                     searchbar.showModal()
             }

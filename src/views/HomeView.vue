@@ -6,12 +6,13 @@
 <template>
     <button @click="router.push('/createlink')">Create a new link</button>
     <button @click="router.push('/sortlinks')">Sort links</button>
-    <button @click="router.push('/themes')">Themes</button>
+    <button @click="router.push('/themes')">Theming</button>
 </template>
 
 <style scoped>
     button {
         width: 100%;
+        height: 2rem;
     }
     
     button:not(:last-child) {
